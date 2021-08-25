@@ -21,9 +21,12 @@ class ViewController: UIViewController {
         forgetUserNameButton.titleLabel!.adjustsFontSizeToFitWidth = true
         forgetUserNameButton.titleLabel!.minimumScaleFactor = 0.1
         forgetUserNameButton.layer.cornerRadius = 10
-        
-        
     }
+
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
 
 
 }
