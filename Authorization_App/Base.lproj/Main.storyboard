@@ -36,6 +36,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
                                 <state key="normal" title="Log in"/>
                                 <connections>
+                                    <action selector="loginButtonPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="dfJ-lM-chG"/>
                                     <segue destination="3ms-eX-Qkb" kind="show" id="dPw-QL-yZf"/>
                                 </connections>
                             </button>
@@ -46,10 +47,16 @@
                                         <rect key="frame" x="0.0" y="0.0" width="135.5" height="30"/>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
                                         <state key="normal" title="Forget user name?"/>
+                                        <connections>
+                                            <action selector="forgetUserNamePressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="7ap-hB-Foj"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Pw-Mn-gRd">
                                         <rect key="frame" x="163.5" y="0.0" width="130.5" height="30"/>
                                         <state key="normal" title="Forget password?"/>
+                                        <connections>
+                                            <action selector="forgetPasswordPressed" destination="BYZ-38-t0r" eventType="touchUpInside" id="lN1-HJ-SSG"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -72,6 +79,8 @@
                     <connections>
                         <outlet property="forgetPasswordButton" destination="8Pw-Mn-gRd" id="w2L-gO-toN"/>
                         <outlet property="forgetUserNameButton" destination="3cH-2g-qMT" id="cCq-Pd-1Tr"/>
+                        <outlet property="passwordTF" destination="LiG-mX-tth" id="Z5t-T3-HNk"/>
+                        <outlet property="userNameTF" destination="EJ7-8z-w62" id="PIK-vG-sYM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -103,26 +112,32 @@
                                 <state key="normal" title="Log out">
                                     <color key="titleColor" systemColor="systemBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <segue destination="kTm-KV-4so" kind="unwind" unwindAction="logOfFor:" id="VsP-hb-hhy"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="eRm-u4-bW2"/>
                         <color key="backgroundColor" red="1" green="0.74855698886760713" blue="0.80602673161133842" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="9ex-43-LOv" firstAttribute="centerX" secondItem="xwn-aY-hGb" secondAttribute="centerX" id="O7X-oI-eYW"/>
+                            <constraint firstItem="eRm-u4-bW2" firstAttribute="trailing" secondItem="d6m-MM-w3F" secondAttribute="trailing" constant="20" id="ObD-pA-3q6"/>
                             <constraint firstItem="d6m-MM-w3F" firstAttribute="top" secondItem="eRm-u4-bW2" secondAttribute="top" constant="90" id="Vq4-mr-byr"/>
                             <constraint firstItem="dZp-33-aVA" firstAttribute="top" secondItem="d6m-MM-w3F" secondAttribute="bottom" constant="39" id="YX6-Ff-1OB"/>
-                            <constraint firstItem="d6m-MM-w3F" firstAttribute="centerX" secondItem="xwn-aY-hGb" secondAttribute="centerX" id="bxH-ef-3yh"/>
                             <constraint firstItem="dZp-33-aVA" firstAttribute="centerX" secondItem="xwn-aY-hGb" secondAttribute="centerX" id="ceg-R6-1gd"/>
-                            <constraint firstItem="d6m-MM-w3F" firstAttribute="leading" secondItem="eRm-u4-bW2" secondAttribute="leading" constant="20" id="jDg-cU-ug2"/>
-                            <constraint firstItem="eRm-u4-bW2" firstAttribute="trailing" secondItem="d6m-MM-w3F" secondAttribute="trailing" constant="20" id="qtu-sV-raq"/>
                             <constraint firstItem="eRm-u4-bW2" firstAttribute="bottom" secondItem="9ex-43-LOv" secondAttribute="bottom" constant="192" id="sYa-yp-X1J"/>
+                            <constraint firstItem="d6m-MM-w3F" firstAttribute="leading" secondItem="eRm-u4-bW2" secondAttribute="leading" constant="20" id="sjk-at-xfz"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sAe-jZ-69I"/>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="d6m-MM-w3F" id="ziB-Qk-9N1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S4E-q4-pmB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="kTm-KV-4so" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="-2222" y="-273"/>
+            <point key="canvasLocation" x="-2222" y="-265"/>
         </scene>
     </scenes>
     <resources>
