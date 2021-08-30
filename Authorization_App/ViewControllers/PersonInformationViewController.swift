@@ -22,10 +22,10 @@ class PersonInformationViewController: UIViewController {
         super.viewDidLoad()
         
         guard let personData = person else { return }
-        firstNmaeLabel.text = "Имя \(personData.firstName)"
-        lastNameLabel.text = "Фамилия \(personData.lastName)"
-        ageLabel.text = "Возраст \(String(personData.age))"
-        genderLabel.text = "Пол \(personData.gender.rawValue)"
+        firstNmaeLabel.text = "Имя: \(personData.firstName)"
+        lastNameLabel.text = "Фамилия: \(personData.lastName)"
+        ageLabel.text = "Возраст: \(String(personData.age))"
+        genderLabel.text = "Пол: \(personData.gender.rawValue)"
        
     }
  
