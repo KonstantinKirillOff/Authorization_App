@@ -16,15 +16,16 @@ class ViewController: UIViewController {
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
-        self.view.endEditing(true)
+        view.endEditing(true)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let tabControllers = segue.destination as! UITabBarController
+        guard let viewControllers = tabControllers.viewControllers else { return }
         
-        for viewController in tabControllers.viewControllers! {
+        for viewController in viewControllers {
             if let welcomeSV = viewController as? WelcomeViewController {
-                welcomeSV.userName = "\(userData.person.firstName) \(userData.person.lastName)"
+                welcomeSV.person = userData.person
             } else if let navigationVC = viewController as? UINavigationController {
                 let personVC = navigationVC.topViewController as! PersonInformationViewController
                 personVC.person = userData.person
