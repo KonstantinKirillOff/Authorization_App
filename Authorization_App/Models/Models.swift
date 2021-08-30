@@ -19,7 +19,8 @@ struct User {
                 firstName: "Konstantin",
                 lastName: "Kirillov",
                 age: 36,
-                gender: .male))
+                gender: .male,
+                programmLanguages: ["1C", "JavaScript", "Swift"]))
     }
     
 }
@@ -29,6 +30,7 @@ struct Person {
     let lastName: String
     let age: Int
     let gender: Gender
+    let programmLanguages: [String]
     
 }
 
@@ -36,3 +38,4 @@ enum Gender {
     case male
     case female
 }
+

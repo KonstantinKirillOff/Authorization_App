@@ -15,6 +15,7 @@
 		B592A12926D6663600AB030C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B592A12826D6663600AB030C /* Assets.xcassets */; };
 		B592A12C26D6663600AB030C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B592A12A26D6663600AB030C /* LaunchScreen.storyboard */; };
 		B5FA6F9126DC87D300B5DBF6 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA6F9026DC87D300B5DBF6 /* Models.swift */; };
+		B5FA6F9326DC997C00B5DBF6 /* PersonInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA6F9226DC997C00B5DBF6 /* PersonInformationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		B592A12B26D6663600AB030C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B592A12D26D6663600AB030C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B5FA6F9026DC87D300B5DBF6 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
+		B5FA6F9226DC997C00B5DBF6 /* PersonInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonInformationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +76,7 @@
 			children = (
 				B592A12326D6662E00AB030C /* LoginViewController.swift */,
 				B5564D7726D6AFA600B2EF29 /* WelcomeViewController.swift */,
+				B5FA6F9226DC997C00B5DBF6 /* PersonInformationViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -185,6 +188,7 @@
 			files = (
 				B592A12426D6662E00AB030C /* LoginViewController.swift in Sources */,
 				B5564D7826D6AFA600B2EF29 /* WelcomeViewController.swift in Sources */,
+				B5FA6F9326DC997C00B5DBF6 /* PersonInformationViewController.swift in Sources */,
 				B592A12026D6662E00AB030C /* AppDelegate.swift in Sources */,
 				B592A12226D6662E00AB030C /* SceneDelegate.swift in Sources */,
 				B5FA6F9126DC87D300B5DBF6 /* Models.swift in Sources */,
