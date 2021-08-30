@@ -27,7 +27,8 @@ class PersonInformationViewController: UIViewController {
         lastNameLabel.text = "Фамилия: \(personData.lastName)"
         ageLabel.text = "Возраст: \(String(personData.age))"
         genderLabel.text = "Пол: \(personData.gender.rawValue)"
-        programmLanguagesLabel.text = "Языки программирования: \(personData.programmLanguages.joined(separator: ","))"
+        //        programmLanguagesLabel.text = "Языки программирования: \(personData.programmLanguages.joined(separator: ","))"
+        
        
     }
  

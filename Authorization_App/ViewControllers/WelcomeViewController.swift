@@ -17,7 +17,7 @@ class WelcomeViewController: UIViewController {
         super.viewDidLoad()
         
         guard let person = person else { return }
-        welcomeLabel.text = "Welcome, \(person.firstName) \(person.lastName)"
+        welcomeLabel.text = "Welcome, \(person.fullName)"
     }
 
 }

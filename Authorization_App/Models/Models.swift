@@ -32,6 +32,10 @@ struct Person {
     let gender: Gender
     let programmLanguages: [String]
     
+    var fullName: String {
+        "\(firstName) \(lastName)"
+    }
+    
 }
 
 enum Gender: String {

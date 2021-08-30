@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let tabControllers = segue.destination as! UITabBarController
+        guard let tabControllers = segue.destination as? UITabBarController else { return }
         guard let viewControllers = tabControllers.viewControllers else { return }
         
         for viewController in viewControllers {
