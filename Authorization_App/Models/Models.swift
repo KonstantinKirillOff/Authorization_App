@@ -34,8 +34,8 @@ struct Person {
     
 }
 
-enum Gender {
-    case male
-    case female
+enum Gender: String {
+    case male = "Мужской"
+    case female = "Женский"
 }
 

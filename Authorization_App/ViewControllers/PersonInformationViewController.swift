@@ -16,11 +16,17 @@ class PersonInformationViewController: UIViewController {
     @IBOutlet weak var genderLabel: UILabel!
     @IBOutlet weak var programmLanguagesLabel: UILabel!
     
-    private let person: Person?
+    var person: Person? = nil
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        guard let personData = person else { return }
+        firstNmaeLabel.text = "Имя \(personData.firstName)"
+        lastNameLabel.text = "Фамилия \(personData.lastName)"
+        ageLabel.text = "Возраст \(String(personData.age))"
+        genderLabel.text = "Пол \(personData.gender.rawValue)"
+       
     }
  
 

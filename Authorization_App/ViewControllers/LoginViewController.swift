@@ -20,8 +20,17 @@ class ViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeSV = segue.destination as? WelcomeViewController else { return }
-        welcomeSV.userName = "\(userData.person.firstName) \(userData.person.lastName)"
+        let tabControllers = segue.destination as! UITabBarController
+        
+        for viewController in tabControllers.viewControllers! {
+            if let welcomeSV = viewController as? WelcomeViewController {
+                welcomeSV.userName = "\(userData.person.firstName) \(userData.person.lastName)"
+            } else if let navigationVC = viewController as? UINavigationController {
+                let personVC = navigationVC.topViewController as! PersonInformationViewController
+                personVC.person = userData.person
+                
+            }
+        }
     }
     
     @IBAction func logOf(for segue: UIStoryboardSegue) {
