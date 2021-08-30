@@ -12,8 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var userNameTF: UITextField!
     @IBOutlet weak var passwordTF: UITextField!
 
-    private let user = "Alex"
-    private let password = "123"
+    private let userData = User.getUserInfo()
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
@@ -22,7 +21,7 @@ class ViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let welcomeSV = segue.destination as? WelcomeViewController else { return }
-        welcomeSV.userName = user
+        welcomeSV.userName = "\(userData.person.firstName) \(userData.person.lastName)"
     }
     
     @IBAction func logOf(for segue: UIStoryboardSegue) {
@@ -32,9 +31,9 @@ class ViewController: UIViewController {
     
     
     @IBAction func forgotRegisterData(_ sender: UIButton) {
-        sender.tag == 0
-            ? showAlert(title: "Ooops!", message: "Your name is \(user) 😉", false)
-            : showAlert(title: "Ooops!", message: "Your password is \(password) 🤫", false)
+        sender.tag == 1
+            ? showAlert(title: "Ooops!", message: "Your name is \(userData.login) 😉", false)
+            : showAlert(title: "Ooops!", message: "Your password is \(userData.password) 🤫", false)
     }
     
     
@@ -61,7 +60,7 @@ extension ViewController {
     }
     
     private func checkData(userName: String, password: String) {
-        if userName != self.user || password != self.password {
+        if userName != userData.login || password != userData.password {
             showAlert(title: "Invalid login or password", message: "Please, enter correct ligin and password", true)
         }
     }

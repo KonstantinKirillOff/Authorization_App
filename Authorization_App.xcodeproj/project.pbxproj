@@ -14,6 +14,7 @@
 		B592A12726D6662E00AB030C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B592A12526D6662E00AB030C /* Main.storyboard */; };
 		B592A12926D6663600AB030C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B592A12826D6663600AB030C /* Assets.xcassets */; };
 		B592A12C26D6663600AB030C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B592A12A26D6663600AB030C /* LaunchScreen.storyboard */; };
+		B5FA6F9126DC87D300B5DBF6 /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FA6F9026DC87D300B5DBF6 /* Models.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		B592A12826D6663600AB030C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B592A12B26D6663600AB030C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B592A12D26D6663600AB030C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5FA6F9026DC87D300B5DBF6 /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,57 @@
 		B592A11E26D6662E00AB030C /* Authorization_App */ = {
 			isa = PBXGroup;
 			children = (
-				B592A11F26D6662E00AB030C /* AppDelegate.swift */,
-				B592A12126D6662E00AB030C /* SceneDelegate.swift */,
-				B592A12326D6662E00AB030C /* LoginViewController.swift */,
-				B592A12526D6662E00AB030C /* Main.storyboard */,
-				B592A12826D6663600AB030C /* Assets.xcassets */,
-				B592A12A26D6663600AB030C /* LaunchScreen.storyboard */,
-				B592A12D26D6663600AB030C /* Info.plist */,
-				B5564D7726D6AFA600B2EF29 /* WelcomeViewController.swift */,
+				B5FA6F8B26DC85A500B5DBF6 /* ViewControllers */,
+				B5FA6F8F26DC873300B5DBF6 /* Models */,
+				B5FA6F8C26DC861E00B5DBF6 /* Storyboards */,
+				B5FA6F8E26DC869300B5DBF6 /* App */,
+				B5FA6F8D26DC866D00B5DBF6 /* Resources */,
 			);
 			path = Authorization_App;
+			sourceTree = "<group>";
+		};
+		B5FA6F8B26DC85A500B5DBF6 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				B592A12326D6662E00AB030C /* LoginViewController.swift */,
+				B5564D7726D6AFA600B2EF29 /* WelcomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		B5FA6F8C26DC861E00B5DBF6 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				B592A12526D6662E00AB030C /* Main.storyboard */,
+				B592A12A26D6663600AB030C /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		B5FA6F8D26DC866D00B5DBF6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				B592A12826D6663600AB030C /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		B5FA6F8E26DC869300B5DBF6 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B592A11F26D6662E00AB030C /* AppDelegate.swift */,
+				B592A12126D6662E00AB030C /* SceneDelegate.swift */,
+				B592A12D26D6663600AB030C /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		B5FA6F8F26DC873300B5DBF6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B5FA6F9026DC87D300B5DBF6 /* Models.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +187,7 @@
 				B5564D7826D6AFA600B2EF29 /* WelcomeViewController.swift in Sources */,
 				B592A12026D6662E00AB030C /* AppDelegate.swift in Sources */,
 				B592A12226D6662E00AB030C /* SceneDelegate.swift in Sources */,
+				B5FA6F9126DC87D300B5DBF6 /* Models.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,7 +336,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5VBQ98K5MQ;
-				INFOPLIST_FILE = Authorization_App/Info.plist;
+				INFOPLIST_FILE = Authorization_App/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -311,7 +355,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 5VBQ98K5MQ;
-				INFOPLIST_FILE = Authorization_App/Info.plist;
+				INFOPLIST_FILE = Authorization_App/App/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
